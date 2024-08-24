@@ -7,7 +7,7 @@ import TitlePoster from './images/moviedom_logo.png'
 import TitlePosterSmall from './images/moviedom_poster_small.png'
 import MessageCard from './MessageCard';
 
-const BASE_URL = 'http://www.omdbapi.com/?apikey=929925c6';
+const BASE_URL = 'https://www.omdbapi.com/?apikey=929925c6';
 
 const App = () => {
   const [movieList, setMovieList] = useState([]);
