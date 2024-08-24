@@ -61,7 +61,7 @@ h1 {
   max-width: 1200px; /* Adjust the maximum width as needed */
   margin: 0 auto; /* Center the container horizontally */
   padding: 20px;
-  padding-top: 250px;
+  padding-top: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -142,7 +142,7 @@ panel {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header.shrink {
@@ -150,4 +150,73 @@ panel {
   justify-content: space-between;
   padding: 10px;
   background-color: #a2a0a088;
+}
+
+.movie-details {
+  color: white;
+  padding: 20px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.movie-details h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.movie-meta p {
+  margin: 5px 0;
+}
+
+.meta-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.movie-plot {
+  margin-top: 20px;
+}
+
+.movie-poster {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.movie-ratings {
+  margin-top: 20px;
+}
+
+.movie-ratings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-ratings li {
+  margin: 5px 0;
+}
+
+.header .logo {
+  transition: width 0.3s ease;
+  border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+  border-radius: 15px; /* this doesn't work */
+  border-width: 4px;
+  border-style: none;
+  padding: 5px;
+}
+
+.header .logo.large {
+  width: 350px; /* adjust size as needed */
+}
+
+.header .logo.small {
+  width: 350px; /* adjust size as needed */
 }
