@@ -1,4 +1,5 @@
 # MovieDom
+![MovieDom Logo](./src/images/moviedom_logo.png)
 
 MovieDom is a web application that allows users to search for movies and view detailed information about them. It uses the OMDb API to fetch movie data and provides an intuitive interface for browsing and exploring movies.
 
