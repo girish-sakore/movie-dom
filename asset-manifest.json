@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/movie-dom/static/css/main.6529148a.css",
-    "main.js": "/movie-dom/static/js/main.f661ea06.js",
+    "main.js": "/movie-dom/static/js/main.e0e0ea6f.js",
     "static/js/453.9c291cc8.chunk.js": "/movie-dom/static/js/453.9c291cc8.chunk.js",
     "static/media/Deadpool-Wallpaper-1920x1080.jpg": "/movie-dom/static/media/Deadpool-Wallpaper-1920x1080.b822ec85a3a5a20a15d5.jpg",
     "static/media/moviedom_logo.png": "/movie-dom/static/media/moviedom_logo.c84c3205d4406beb58f7.png",
@@ -9,11 +9,11 @@
     "static/media/search.svg": "/movie-dom/static/media/search.e5de61eb75c19cd6e28edf611863ef6f.svg",
     "index.html": "/movie-dom/index.html",
     "main.6529148a.css.map": "/movie-dom/static/css/main.6529148a.css.map",
-    "main.f661ea06.js.map": "/movie-dom/static/js/main.f661ea06.js.map",
+    "main.e0e0ea6f.js.map": "/movie-dom/static/js/main.e0e0ea6f.js.map",
     "453.9c291cc8.chunk.js.map": "/movie-dom/static/js/453.9c291cc8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6529148a.css",
-    "static/js/main.f661ea06.js"
+    "static/js/main.e0e0ea6f.js"
   ]
 }
