@@ -24,7 +24,7 @@ You can see a live preview of the application [here](https://girish-sakore.githu
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/movie-dom.git
+   git clone https://github.com/girish-sakore/movie-dom.git
    cd movie-dom
 
 2. **Install dependencies:**
