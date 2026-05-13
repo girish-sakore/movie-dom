@@ -69,9 +69,9 @@ export const useMovieSearch = () => {
     [runSearch, submittedQuery]
   );
 
-  useEffect(() => {
-    runSearch(DEFAULT_SEARCH_TERM, 1);
-  }, [runSearch]);
+  // useEffect(() => {
+  //   runSearch(DEFAULT_SEARCH_TERM, 1);
+  // }, [runSearch]);
 
   return {
     query,

@@ -16,7 +16,8 @@ const SearchBar = ({ query, onQueryChange, onSearch }) => {
         aria-label="Search movies"
       />
       <button type="submit" aria-label="Search" disabled={!query.trim()}>
-        <img src={searchIcon} alt="" />
+        {/* <img src={searchIcon} alt="" /> */}
+        <span className="search-icon" aria-hidden="true">💭🤔</span>
       </button>
     </form>
   );
