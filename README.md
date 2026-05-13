@@ -1,68 +1,65 @@
 # MovieDom
-![MovieDom Logo](./src/images/moviedom_logo.png)
 
-MovieDom is a web application that allows users to search for movies and view detailed information about them. It uses the OMDb API to fetch movie data and provides an intuitive interface for browsing and exploring movies.
-
-## Preview
-
-You can see a live preview of the application [here](https://girish-sakore.github.io/movie-dom/).
+MovieDom is a React movie-search app powered by the OMDb API. This version has been moved from Create React App to Vite and reorganized into a modern component, hook, and service structure so the UI and feature set can evolve more easily.
 
 ## Features
 
-- Search for movies by title
-- View detailed movie information including plot, ratings, and more
-- Responsive design with a header that shrinks on scroll
+- Search movies, series, and games through OMDb
+- View full movie details and ratings
+- Loading, empty, and error states
+- Paginated search results
+- Responsive, poster-first layout
 
-## Technologies Used
+## Tech Stack
 
-- React
+- React 18
+- Vite
+- Vitest
+- Testing Library
 - OMDb API
-- CSS
 
-## Installation
+## Setup
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/girish-sakore/movie-dom.git
-   cd movie-dom
-
-2. **Install dependencies:**
+1. Install dependencies:
 
    ```bash
    npm install
+   ```
 
-3. **Start the development server:**
+2. Create a local environment file:
+
    ```bash
+   cp .env.example .env
+   ```
 
-    npm start
+3. Add your OMDb API key:
 
-The application will be available at **http://localhost:3000**.
+   ```env
+   VITE_OMDB_API_KEY=your_omdb_api_key
+   ```
 
-## Usage
+4. Start the dev server:
 
-1. Enter a movie title in the search bar and click the search icon.
-2. Browse the search results and click on a movie to view its details.
-3. Click the "Back to List" button to return to the search results.
+   ```bash
+   npm run dev
+   ```
 
-## File Structure
+## Scripts
 
-- `src/App.js`: Main application component
-- `src/MovieCard.js`: Component to display a movie card
-- `src/MovieDetails.js`: Component to display detailed information about a movie
-- `src/images/`: Contains logo and search icon images
-- `src/App.css`: Contains styles for the application
+- `npm run dev` starts the Vite dev server
+- `npm run build` creates a production build in `dist`
+- `npm run preview` previews the production build
+- `npm run test` runs Vitest
+- `npm run deploy` deploys `dist` to GitHub Pages
 
-## Contributing
+## Project Structure
 
-If you want to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [OMDb API](https://www.omdbapi.com/) for movie data
-- [React](https://reactjs.org/) for building the user interface
-
+```text
+src/
+  components/       Reusable UI components
+  hooks/            App-specific React hooks
+  services/         OMDb API client
+  images/           Existing visual assets
+  App.jsx           App composition
+  main.jsx          Vite entrypoint
+```
