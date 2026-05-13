@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react';
 import Header from './components/Header';
 import LoadingGrid from './components/LoadingGrid';
 import MessageCard from './components/MessageCard';
@@ -5,8 +6,18 @@ import MovieDetails from './components/MovieDetails';
 import MovieGrid from './components/MovieGrid';
 import Pagination from './components/Pagination';
 import { useMovieSearch } from './hooks/useMovieSearch';
+import defaultVibeImage from './images/Deadpool-Wallpaper-1920x1080.jpg';
+
+const getMovieVibeImage = (movie) => {
+  if (!movie || !movie.Poster || movie.Poster === 'N/A') {
+    return defaultVibeImage;
+  }
+
+  return movie.Poster;
+};
 
 const App = () => {
+  const [isDynamicVibeEnabled, setIsDynamicVibeEnabled] = useState(false);
   const {
     query,
     setQuery,
@@ -24,9 +35,28 @@ const App = () => {
     changePage,
   } = useMovieSearch();
 
+  const vibeImage = useMemo(
+    () => (isDynamicVibeEnabled ? getMovieVibeImage(selectedMovie) : defaultVibeImage),
+    [isDynamicVibeEnabled, selectedMovie]
+  );
+
+  const appClassName = [
+    'app',
+    isDynamicVibeEnabled ? 'app--dynamic-vibe' : '',
+    isDynamicVibeEnabled && selectedMovie ? 'app--movie-vibe' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <div className="app">
-      <Header query={query} onQueryChange={setQuery} onSearch={submitSearch} />
+    <div className={appClassName} style={{ '--vibe-image': `url("${vibeImage}")` }}>
+      <Header
+        query={query}
+        isDynamicVibeEnabled={isDynamicVibeEnabled}
+        onDynamicVibeToggle={() => setIsDynamicVibeEnabled((isEnabled) => !isEnabled)}
+        onQueryChange={setQuery}
+        onSearch={submitSearch}
+      />
 
       <main className="app__main">
         {selectedMovie ? (

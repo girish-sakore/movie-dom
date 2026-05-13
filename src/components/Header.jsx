@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react';
+import DynamicVibeToggle from './DynamicVibeToggle';
 import SearchBar from './SearchBar';
 import fullLogo from '../images/moviedom_logo.png';
 import smallLogo from '../images/moviedom_poster_small.png';
 
-const Header = ({ query, onQueryChange, onSearch }) => {
+const Header = ({
+  query,
+  isDynamicVibeEnabled,
+  onDynamicVibeToggle,
+  onQueryChange,
+  onSearch,
+}) => {
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
@@ -21,6 +28,10 @@ const Header = ({ query, onQueryChange, onSearch }) => {
 
   return (
     <header className={`site-header ${isCompact ? 'site-header--compact' : ''}`}>
+      <DynamicVibeToggle
+        isEnabled={isDynamicVibeEnabled}
+        onToggle={onDynamicVibeToggle}
+      />
       <a className="site-header__brand" href={homeHref} aria-label="MovieDom home">
         <img src={isCompact ? smallLogo : fullLogo} alt="MovieDom" />
       </a>
